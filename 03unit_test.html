@@ -1,0 +1,30 @@
+<html>
+
+<head>
+  <title>Unit Tests</title>
+  <script src='tempConverter.js'></script>
+  <script>
+    function test(celceus, expected) {
+      results.total++;
+      var result = fahrenheit(celceus);
+      if (result !== expected) {
+        results.failed++;
+        console.log("Expected " + expected + ", but instead got " + result);
+      }
+    }
+    var results = {
+      total: 0,
+      failed: 0
+    };
+    test(20, 68);
+    test(0, 32);
+    test(10, 50);
+    console.log(results.total + " tests carried out, " + results.failed +
+      " failed, " + (results.total - results.failed) + " passed.")
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>
